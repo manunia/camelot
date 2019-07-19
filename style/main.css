@@ -29,12 +29,21 @@ header .logo {
   width: 430px;
   height: 174px;
   background: url("../images/logo.png") center no-repeat;
+  background-size: cover;
 }
 header .text {
   font-size: 40px;
   font-family: "Merriweather";
   color: #ffffff;
   line-height: 1.3;
+  text-align: center;
+}
+header .text-mob {
+  display: none;
+  font-size: 24px;
+  font-family: "Myriad Pro";
+  color: #ffffff;
+  line-height: 1.25;
   text-align: center;
 }
 header .streth-box {
@@ -55,8 +64,14 @@ header .attainments-block .attainment {
   justify-content: space-between;
   height: 92px;
 }
-@media (max-width: 764px) {
+@media (max-width: 768px) {
   header .attainments-block {
+    display: none;
+  }
+  header .text-mob {
+    display: block;
+  }
+  header .text {
     display: none;
   }
 }
@@ -66,16 +81,10 @@ header .mob-nav {
 header .mob-nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
-  width: 200px;
-  margin: 20px;
   float: right;
 }
 header .mob-nav ul li {
   display: block;
-  height: 20px;
-  padding: 5px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.5s;
   opacity: 0;
 }
@@ -246,7 +255,7 @@ main .products-block .offer span {
 #logistic .ship {
   float: left;
 }
-@media (max-width: 1150px) {
+@media (max-width: 799px) {
   #logistic .ship {
     float: none;
     margin-bottom: 20px;

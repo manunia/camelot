@@ -31,13 +31,21 @@ header {
     width: 430px;
     height: 174px;
     background: url("../images/logo.png")center no-repeat;
-
+    background-size: cover;
   }
   .text {
     font-size: 40px;
     font-family: "Merriweather";
     color: rgb(255, 255, 255);
     line-height: 1.3;
+    text-align: center;
+  }
+  .text-mob {
+    display: none;
+    font-size: 24px;
+    font-family: "Myriad Pro";
+    color: rgb(255, 255, 255);
+    line-height: 1.25;
     text-align: center;
   }
   .streth-box {
@@ -59,11 +67,19 @@ header {
     }
   }
 
-  @media (max-width: 764px) {
+  @media (max-width: 768px) {
     .attainments-block {
       display: none;
     }
+    .text-mob {
+      display: block;
+    }
+    .text {
+      display: none;
+    }
   }
+
+
 
   .mob-nav {
     display: none;
@@ -71,16 +87,10 @@ header {
     ul{
       list-style:none;
       margin:0;
-      padding:0;
-      width:200px;
-      margin:20px;
       float: right;
     }
     ul li{
       display:block;
-      height:20px;
-      padding:5px;
-      border-top:1px solid rgba(255,255,255,.1);
       transition:all .5s;
       opacity:0;
     }
@@ -120,7 +130,6 @@ header {
     }
     #collapse:checked + label:before{
       position:relative;
-      //right:calc(-160px);
       opacity:0.5;
 
     }
@@ -275,10 +284,9 @@ main {
   .ship {
     float: left;
 
-
   }
 
-  @media (max-width: 1150px) {
+  @media (max-width: 799px) {
     .ship {
       float: none;
       margin-bottom: 20px;
